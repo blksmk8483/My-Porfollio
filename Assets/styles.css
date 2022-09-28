@@ -1,0 +1,291 @@
+:root {
+    --dark-gray: #31343d;
+    --dark-blue: #445876;
+    --light-blue: #92cbce;
+}
+
+body {
+    background-color: #eeeef7;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--dark-blue);
+}
+
+
+/* NAVIGATION BAR */
+.navbar {
+    background: var(--dark-gray);
+    color: var(--light-blue);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 8px;
+    border-radius: 10px;
+    margin: 1%;
+    width: auto;
+    height: 5%;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav a {
+    color: var(--light-blue);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.navbar a:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+/* My subtitle section */
+
+#cool-subtitle {
+    background-image: url(./images/red-brick-pattern.jpeg);
+    display: flex;
+    height: 7rem;
+    justify-content: right;
+}
+
+.subtitle {
+    color: var(--light-blue);
+    font-size: 32px;
+    font-weight: bolder;
+    padding: 8px;
+    border-radius: 10px;
+    margin: 1%;
+    width: auto;
+    height: 52px;
+
+}
+
+/* Styling for my different main section for (About Me, Work, Contact Me) */
+
+.page-section {
+    display: flex;
+    /* flex-direction: row; */
+    /*- This is default so do I need it? */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: stretch; */
+    /* padding: 2% 4% */
+    margin: 20px 0;
+}
+
+
+/* Styling for my different sidebar (About Me, Work, Contact Me)*/
+
+.sidebar {
+    width: 20%;
+    line-height: 1.1;
+    color: var(--dark-blue);
+    font-size: 48px;
+    margin: 8px 0%;
+    border-right: 5px solid #445876;
+    /* padding-right: 2%; */
+    text-align: right;
+    padding: 8px;
+}
+
+/* This is for the size of my main-content for (About Me, Work, Contact Me) */
+.main-content {
+    /* width: 85%; */
+    /* width: 60rem */
+    /* margin: 8px 5px; */
+    width: 70%;
+}
+
+.contact a {
+    color: var(--dark-blue);
+    /* text-decoration:underline 5px var(--dark-blue); This looks awful! */
+    text-decoration: none;
+    /* align-items: center; */
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 8px;
+    font-size: 18px;
+    /* padding: 5%; */
+}
+
+/* Why? I also tried it as an inline-flex */
+.contact li {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 80px 30px;
+}
+
+.contact a:hover {
+    color: var(--dark-gray);
+}
+
+/* .page-section {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+/* .work-links {
+display: flex;
+flex-wrap: wrap;
+width: 45%;
+height: 15%;
+justify-content: space-between;
+} */
+
+/* FOR THE WORK SECTIONS BOXES  */
+.work-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+    /* width: 70%; */
+}
+
+.work-links {
+    color: var(--dark-blue);
+    border: 4px solid var(--light-blue);
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    /* max-height: 150px; */
+    min-height: 150px;
+    align-items: flex-end;
+    /* padding: 30px;
+    margin: 30px; */
+    width: 45%;
+    margin: 2%;
+}
+
+.work-links div {
+    background-color: var(--light-blue);
+    width: auto;
+    position: relative;
+    bottom: 0px;
+    padding: 8px;
+    left: 0;
+}
+
+.work-boxes a:nth-child(1) {
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mern-stock {
+    background-image: url(./images/image-1.jpg)
+}
+
+.led-wall {
+    background-image: url("./images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg");
+}
+
+.calculator {
+    background-image: url("./images/luca-bravo-9l_326FISzk-unsplash.jpg");
+}
+
+.pastel-puzzles {
+    background-image: url("./images/marvin-meyer-SYTO3xs06fU-unsplash.jpg");
+}
+
+.run-buddy {
+    background-image: url("images/scott-graham-5fNmWej4tAA-unsplash.jpg");
+}
+
+
+@media screen and (max-width: 980px) {
+    .navbar {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar h2 {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 10vw;
+    }
+
+    nav a {
+        justify-content: center;
+    }
+
+    .page-section>h2,
+    .page-section>div {
+        flex: 0 0 100%;
+    }
+
+    .page-section>h2 {
+        border-right: none;
+        border-bottom: 4px solid #445877;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        text-align: left;
+        font-size: 130px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .work-links,
+    .work-boxes a:nth-child(1) {
+        flex-basis: 100%;
+    }
+
+    .cool-subtitle {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .contact {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact-me a {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact li {
+        margin: 10px;
+    }
